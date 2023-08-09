@@ -1,0 +1,14 @@
+Redux는 Javascript application들의 상태(state)를 관리하는 라이브러리 입니다.
+
+Redux는 react와 많이 사용되면서 유명해졌지만,
+React에서만 사용할 수 있는 라이브러리가 아닙니다.
+
+Redux는 React와는 별개다.
+
+따라서, Angular, Vue.js, Vanilla 에서도 사용이 가능합니다.
+
+프로젝트 셋업
+npx create-react-app vanilla-redux
+
+프로젝트 셋업 (타입스크립트)
+npx create-react-app vanilla-redux --template typescript
