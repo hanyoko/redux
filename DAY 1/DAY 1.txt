@@ -12,3 +12,11 @@ npx create-react-app vanilla-redux
 
 프로젝트 셋업 (타입스크립트)
 npx create-react-app vanilla-redux --template typescript
+
+echo "# redux" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hanyoko/redux.git
+git push -u origin main
