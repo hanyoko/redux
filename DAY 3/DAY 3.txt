@@ -1,0 +1,44 @@
+DAY 3
+
+action은 redux에서 function을 부를 때 쓰는 두번째 parameter 혹은 argument
+
+0 {type: '@@redux/INITo.t.s.h.b.9'}	//현재의 state는 0
+0 {type: 'ADD'}				//ADD라는 action을 가졌고, 그 다음에 일어날 일은 state가 1이 될 것이다.
+1 {type: 'ADD'}				//state는 1 그리고 다른 ADD라는 action을 가질 것이다.
+2 {type: 'ADD'}				//2를 리턴
+3 {type: 'ADD'}				//3을 리턴
+4 {type: 'ADD'}				//4를 리턴 ... 이렇게 반복
+5 {type: 'MINUS'}			//state 5에서는 MINUS라는 action을 가졌다
+4					//현재의 state는 4
+
+
+Subscribe : store 안에 있는 변화 감지
+store.subscribe(func); // store안의 변화를 감지하면 func 실행
+
+1. data의 store를 create하고, store에게 data의 reducer를 알려준다.
+2. dispatch로 message(action)을 store에 전송
+3. 이렇게 store, dispatch, action을 말해주면 redux가 reducer를 호출해서 매개변수에 current state와 my action을 넣어줘서 실행
+4. reducer가 실행되면 data를 바꿔주고 return으로 반환되는 값은 다시 app의 data가 된다.
+
+
+---
+
+Recap
+
+countModifier는 현재 상태의 application과 함께 불려지는 function이다
+
+✅ reducer : 현재 상태의 application과 함께 불려지는 function (+ with action)
+return하는 것은 application의 state가 됨
+✅ action : reducer와 소통하는 방법으로 Object여야 하며 그 key 이름은 항상 type임 (바꿀 수 없음)
+✅ dispatch : reducer에게 action을 보내는 방법
+✅ subscribe : store의 변화를 감지하면 인자값으로 준 함수를 실행
+✅ switch가 자주 쓰임
+switch(action.type){
+case ..blah..:
+return smth
+case ..blah2..:
+return smth2
+default:
+return smth3
+}
+✅ string으로 바로 쓰는 대신에 const variable로 선언해서 사용하기 -> 에러 발견 용이
