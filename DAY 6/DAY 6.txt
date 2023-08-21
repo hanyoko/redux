@@ -1,0 +1,7 @@
+DAY 6
+
+ocalStorage에 저장하기
+1. store.js에서 reducer에 initialState 할당하는 부분 수정
+2. save함수 추가하고 새로운 state를 리턴하기 전에 호출
+
+기존 reducer 코드를 localStorage API로 교체하여 구현하는 챌린지
